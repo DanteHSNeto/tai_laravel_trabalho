@@ -6,8 +6,7 @@
 @endsection
 
 @section('conteudo')
-<a href="/alunos"><img src="{{url('/img/aluno_ico.png')}}"></a>
-<a href="/professores"><img src="{{url('/img/prof_ico.png')}}"></a>
-
+<a href="/jovens">Jovens</a>
+<a href="/adultos">Adultos</a>
+<a href="/idosos">Idosos</a>
 @endsection
-

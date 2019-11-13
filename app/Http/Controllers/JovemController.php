@@ -1,49 +1,50 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\JovemModel;
 use Request;
-
 class JovemController extends Controller
 {
     public function listar()
     {
-        $jovems = JovemModel::orderBy('nome')->get();
+        $jovens = JovemModel::orderBy('nome')->get();
 //        dd($alunos);
-        return view('jovens')->with('jovens', $jovems);
+        return view('jovens')->with('jovens', $jovens);
     }
-
     public function cadastrar()
     {
-        return view('jovemCadastrar');
+        return view('jovCadastro');
     }
     public function editar($id)
     {
         $jovem = JovemModel::find($id);
-
-        return view('jovemEditar')->with('jovem', $jovem );
+        return view('JovemEditar')->with('jovem', $jovem );
     }
-
-
     public function salvar($id)
     {
         // INSERT
         if ($id == 0) {
             $objJovemModel = new JovemModel();
-            $$objJovemModel->nome = Request::input('nome');
-            $$objJovemModel->curso = Request::input('curso');
-            $$objJovemModel->turma = Request::input('turma');
-            $$objJovemModel->save();
+            $objJovemModel->nome = Request::input('nome');
+            $objJovemModel->inclinacao = Request::input('inclinacao');
+            $objJovemModel->tamanho = Request::input('tamanho');
+            $objJovemModel->espacamento = Request::input('espacamento');
+            $objJovemModel->pressao = Request::input('pressao');
+            $objJovemModel->pingando = Request::input('pingando');
+            $objJovemModel->cruzando = Request::input('cruzando');
+            $objJovemModel->save();
         }
         else {
-            $$objJovemModel = JovemModel::find($id);
-            $$objJovemModel->nome = Request::input('nome');
-            $$objJovemModel->curso = Request::input('curso');
-            $$objJovemModel->turma = Request::input('turma');
-            $$objJovemModel->save();
+            $objJovemModel = new JovemModel();
+            $objJovemModel->nome = Request::input('nome');
+            $objJovemModel->inclinacao = Request::input('inclinacao');
+            $objJovemModel->tamanho = Request::input('tamanho');
+            $objJovemModel->espacamento = Request::input('espacamento');
+            $objJovemModel->pressao = Request::input('pressao');
+            $objJovemModel->pingando = Request::input('pingando');
+            $objJovemModel->cruzando = Request::input('cruzando');
+            $objJovemModel->save();
         }
-        return redirect()->action('Jovemontroller@listar');
+        return redirect()->action('JovemController@listar');
     }
     public function excluir($id)
     {
@@ -51,5 +52,4 @@ class JovemController extends Controller
         $jovem->delete();
         return redirect()->action('JovemController@listar');
     }
-
 }
