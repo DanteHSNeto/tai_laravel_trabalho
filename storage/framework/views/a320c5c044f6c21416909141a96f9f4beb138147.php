@@ -9,11 +9,12 @@
 <body>
         <h1>Handwrithing Analyser</h1>
         <div>
-            @yield('cabecalho')
+            <?php echo $__env->yieldContent('cabecalho'); ?>
         </div>
 
         <div>
-            @yield('conteudo')
+            <?php echo $__env->yieldContent('conteudo'); ?>
         </div>
 </body>
 </html>
+<?php /**PATH D:\wamp\www\dantelaravel\resources\views/principal.blade.php ENDPATH**/ ?>

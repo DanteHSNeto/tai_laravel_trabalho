@@ -6,7 +6,7 @@
 @endsection
 
 @section('conteudo')
-<a href="/jovens">Jovens</a>
-<a href="/adultos">Adultos</a>
+<a href="/jovens">Jovens</a>/
+<a href="/adultos">Adultos</a>/
 <a href="/idosos">Idosos</a>
 @endsection

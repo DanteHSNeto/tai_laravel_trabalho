@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\IdosoModel;
+use Illuminate\Support\Facades\DB;
 use Request;
 class IdosoController extends Controller
 {

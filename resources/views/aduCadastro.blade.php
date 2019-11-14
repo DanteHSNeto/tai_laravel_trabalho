@@ -16,8 +16,8 @@
         <br>
         <label>Inclinação: </label>
         <select name="inclinacao">
-            <option value="esque">Inclinida para a esquerda</option>
-            <option value="direi">Inclinado para a direita</option>
+            <option value="esquerdo">Inclinida para a esquerda</option>
+            <option value="direito">Inclinado para a direita</option>
             <option value="sem">Sem inclinação</option>
         </select>
         <br>

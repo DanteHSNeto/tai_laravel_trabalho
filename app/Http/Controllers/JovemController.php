@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\JovemModel;
+use Illuminate\Support\Facades\DB;
 use Request;
 class JovemController extends Controller
 {
